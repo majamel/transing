@@ -1,2 +1,92 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+stock = '''
+=========================================
+=========================================
+==Welcome to *MAJAMEL* translator units==
+=========================================
+=========================================
+
+m/s
+m/h
+km/s
+km/h
+
+'''
+
+print(stock)
+transed = []
+
+def translator_of_units():
+    
+
+   input_unit = input('Enter your unit :')
+   input_trans_unit = input('Enter your second unit to trans :')
+   input_number = int(input('Enter your your number :'))
+   
+
+
+   if input_unit == 'm/s':
+      if input_trans_unit == 'm/h':
+        transed = input_number * 3600
+        unit = 'm/h'
+        print(transed , unit)
+
+      elif input_trans_unit == 'km/s': 
+         transed = input_number * 1/1000
+         unit = 'km/s'
+         print(transed)
+
+      elif input_trans_unit == 'km/h':
+         transed = input_number * 10/36
+         unit = 'km/h'
+         print(transed , unit)
+   elif input_unit == 'm/h':
+      if input_trans_unit == 'm/s':
+         transed = input_number * 3600
+         unit = 'm/s'
+         print(transed , unit)
+
+      elif input_trans_unit == 'km/s':
+         transed = input_number * 1/3600000
+         unit = 'km/s'
+         print(transed , unit)
+
+      elif input_trans_unit == 'km/h':
+         transed = input_number * 1/1000
+         unit = 'km/h'
+         print(transed , unit)
+   elif input_unit == 'km/s':
+      if input_trans_unit == 'm/s':
+         transed = input_number * 1000
+         unit = 'm/s'
+         print(transed , unit)
+
+      elif input_trans_unit == 'm/h':
+         transed = input_number * 3.6
+         unit = 'm/h'
+         print(transed , unit)
+
+      elif input_trans_unit == 'km/h':
+         transed = input_number * 1/3600
+         unit = 'km/h'
+         print(transed , unit)
+
+   elif input_unit == 'km/h':
+      if input_trans_unit == 'm/s':
+         transed = input_number * 10/36
+         unit = 'm/s'
+         print(transed , unit)
+
+      elif input_trans_unit == 'm/h':
+         transed = input_number * 3600
+         unit = 'm/h'
+         print(transed)
+
+      elif input_trans_unit == 'km/s':
+         transed = input_number * 3600
+         unit = 'km/s'
+         print(transed , unit)
+
+
+translator_of_units()
